@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Yawar AI — a modular personal AI assistant with a knowledge center.">
+  <title>Yawar AI | Knowledge Assistant</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Assistant menu">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">Y</div>
+        <div><strong>Yawar AI</strong><span>Knowledge Assistant</span></div>
+      </div>
+      <button class="new-chat" id="new-chat" type="button">＋ New conversation</button>
+      <div class="sidebar-note">
+        <span class="status-dot"></span>
+        <div><strong>Knowledge Center</strong><p>Ask questions and explore your saved knowledge.</p></div>
+      </div>
+      <div class="sidebar-footer">Your assistant, built to grow.</div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div><p class="eyebrow">PERSONAL AI WORKSPACE</p><h1>How can I help you?</h1></div>
+        <span class="model-pill"><span class="status-dot"></span> AI assistant</span>
+      </header>
+
+      <section class="chat-area" id="chat-area" aria-live="polite" aria-label="Conversation">
+        <div class="welcome" id="welcome">
+          <div class="welcome-icon" aria-hidden="true">✦</div>
+          <h2>Welcome to Yawar AI</h2>
+          <p>Ask a question, explore an idea, or get help understanding a topic.</p>
+          <div class="suggestions">
+            <button type="button" class="suggestion">Explain a difficult concept simply</button>
+            <button type="button" class="suggestion">Help me plan a software project</button>
+            <button type="button" class="suggestion">Summarize my knowledge articles</button>
+          </div>
+        </div>
+      </section>
+
+      <form class="composer" id="chat-form">
+        <label class="sr-only" for="message">Message Yawar AI</label>
+        <textarea id="message" name="message" rows="1" maxlength="4000"
+          placeholder="Message Yawar AI..." autocomplete="off" required></textarea>
+        <button id="send-button" class="send-button" type="submit" aria-label="Send message">↑</button>
+        <p class="composer-hint">AI can make mistakes. Check important information.</p>
+      </form>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
